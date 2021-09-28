@@ -1,0 +1,15 @@
+{
+  "name": "alexandrit",
+  "version": "0.0.1",
+  "description": "lighthouse to prometheus metrics exporter",
+  "main": "index.js",
+  "author": "Dmitrii Fitisov",
+  "license": "MIT",
+  "dependencies": {
+    "async-mutex": "^0.3.2",
+    "lighthouse": "^8.5.1",
+    "minimist": "^1.2.5",
+    "prom-client": "^14.0.0",
+    "puppeteer": "^10.4.0"
+  }
+}
