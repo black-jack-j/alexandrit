@@ -1,6 +1,6 @@
 {
   "name": "alexandrit",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "lighthouse to prometheus metrics exporter",
   "main": "index.js",
   "author": "Dmitrii Fitisov",
@@ -11,5 +11,15 @@
     "minimist": "^1.2.5",
     "prom-client": "^14.0.0",
     "puppeteer": "^10.4.0"
-  }
+  },
+  "bin": {
+    "alexandrit": "cli.js"
+  },
+  "repository": {
+    "url": "https://github.com/black-jack-j/alexandrit"
+  },
+  "keywords": [
+    "lighthouse",
+    "prometheus"
+  ]
 }

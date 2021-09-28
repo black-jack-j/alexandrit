@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const minimist = require('minimist');
 const fs = require('fs');
 const runExporter = require('./index');
@@ -41,7 +43,7 @@ const defaultConfig = {
         }
     },
     "puppeteerConfig": {
-        args: ['--no-sandbox']
+        "args": ["--no-sandbox"]
     }
 }
 
