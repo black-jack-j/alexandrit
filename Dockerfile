@@ -15,6 +15,9 @@ RUN apk add --no-cache \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
+ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_x86_64 /usr/local/bin/dumb-init
+RUN chmod +x /usr/local/bin/dumb-init
+
 COPY *.json yarn.lock ./
 
 
@@ -38,4 +41,4 @@ USER pptruser
 
 EXPOSE 3000
 
-ENTRYPOINT node /app/cli.js --url="http://$TARGET_HOST:$TARGET_PORT" --port "$METRICS_PORT" --no-sandbox
+ENTRYPOINT dumb-init -- node /app/cli.js --url="http://$TARGET_HOST:$TARGET_PORT" --port "$METRICS_PORT" --no-sandbox
