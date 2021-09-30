@@ -1,6 +1,6 @@
 {
   "name": "alexandrit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "lighthouse to prometheus metrics exporter",
   "main": "index.js",
   "author": "Dmitrii Fitisov",
